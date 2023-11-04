@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&family=Lobster&family=Poppins&family=Roboto&family=Shadows+Into+Light&family=Ubuntu&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Shadows Into Light', cursive;
+    background-color: rgb(0, 45, 128);
+    color: white;
+    padding: 0px 50px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    font-size: 23px;
+    letter-spacing: 5px;
+}
+
+.line{
+    background-color: black;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background-color: blue;
+    transition: width 1s ease-in-out;
+}
+
+nav ul {
+
+    list-style: none;
+}
+
+.info{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+.container {
+    font-family: 'Ubuntu', sans-serif;
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+}
+
+.box {
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 9vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.box:hover{
+    background-color: #ebebf3;
+}
+
+.game-info {
+    margin: 0px 20px;
+    font-family: 'Baloo 2', sans-serif;
+}
+
+.game-info h1{
+    font-size: 2.5rem;
+}
+
+.img-box img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+#reset{
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 15px;
+    margin: 0px 20px;
+    padding: 5px 15px;
+    border-radius: 15px;
+    background-color: blue;
+    color: white;
+    border: 2px solid red;
+    cursor: pointer;
+
+}
+
+/* Utillity Class */
+
+.br-0 {
+    border-right: 0;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+
+/* For Mediaquerie */
+
+@media screen and (max-width: 900px){
+
+    .game-container{
+        flex-wrap: wrap;
+    }
+    .game-info{
+        margin-top: 34px;
+
+    }
+    .game-info h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+}
